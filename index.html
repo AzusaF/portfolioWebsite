@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css" type="text/css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap" rel="stylesheet">
+   <script src="./js/script.js" defer></script>
+   <title>Azusa Fukuda</title>
+</head>
+<body id="body">
+   <nav class="navbar">
+      <div class="title">Azusa's Portfolio Site</div>
+      <a href="#" class="toggle-button">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+         <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sec2">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </div>
+   </nav>
+   <div class="main" id="main">
+      <div class="section1" id="sec1">
+         <img class="img-me" src="img/Original.jpg" alt="Azusa Fukuda">
+         <h2 class="name">Azusa Fukuda</h2>
+         <h2 class="jobtitle">Software Developer</h2>
+         <a class="download" href="MyResume.pdf" download>Download</a>
+         <p class="download-desc">Download my resume</p>
+         <button class="contactme" onclick="document.getElementById('contact').scrollIntoView();" >Contact me</button>
+      </div>
+      <div class="table" id="about">
+         <table class="about">
+            <tr>
+               <th colspan="2">About Me and Academic Honesty</th>
+            </tr>
+            <tr>
+               <td colspan="2">I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of this assignment has been distributed to other students.</td>
+            </tr>
+            <tr>
+               <td>date</td>
+               <td>April 13 2022</td>
+            </tr>
+         </table>
+         <table class="about2">
+            <tr>
+               <th colspan="2">Basic Information</th>
+            </tr>
+            <tr>
+               <td>Age</td>
+               <td>35</td>
+            </tr>
+            <tr>
+               <td>Email</td>
+               <td>afukuda@myseneca.ca</td>
+            </tr>
+            <tr>
+               <td>Language</td>
+               <td>Japanese, English</td>
+            </tr>
+            <tr>
+               <td>Class Section</td>
+               <td>NHH</td>
+            </tr>
+            <tr>
+               <td>Studnet ID</td>
+               <td>109697219</td>
+            </tr>
+            <tr>
+               <td>Instructor</td>
+               <td> Prof. Muath Alzgool</td>
+            </tr>
+         </table>
+         <p class="jumptop"><a class="gotop" href="#body">^ Top</a></p>
+      </div>
+      <div id="sec2">
+         <h2 class="edu-title">Education</h2>
+         <table class="edu">
+            <tr>
+               <td class="year" rowspan="2">Sep 2021 -</td>
+               <td class="school"><a href="https://www.senecacollege.ca/">Seneca College</a></td>
+            </tr>
+            <tr>
+               <td class="course">Computer Programming</td>
+            </tr>
+            <tr>
+               <td class="year" rowspan="2">Apr 2014 - Mar 2016</td>
+               <td title="This site is in Japanese" class="school"><a href="https://www.kds.ac.jp/">Kuwasawa Design School</a></td>
+            </tr>
+            <tr>
+               <td class="course">Graphic Design</td>
+            </tr>
+            <tr>
+               <td class="year" rowspan="3">Apr 2006 - Mar 2010</td>
+               <td class="school"><a href="https://www.waseda.jp/top/en/">Waseda University</a></td>
+            </tr>
+            <tr>
+               <td class="course">School of Commerce</td>
+            </tr>
+         </table>
+         <p class="jumptop"><a class="gotop" href="#body">^ Top</a></p>
+      </div>
+      <div class="contact" id="contact">
+         <h2>Contact me</h2>
+         <p>Please fill out the form.</p>
+         <form class="form" action="https://httpbin.org/post" method="post">
+            <label for="name">*Name: <br></label>
+               <input required type="text" name="name"><br>
+            <label for="email">*Email: <br></label>
+               <input required type="email" name="email"><br>
+            <label for="tel">*Phone: <br></label>
+               <input required type="tel" pattern="^\d{3}-\d{3}-\d{4}$" name="phone"><br>
+            <label class="address" for="address">*Address: <br></label>
+               <input required type="text" name="address"><br>
+            <label class="city" for="city">*City: <br></label>
+            <input required type="text" list="cities" name="city" id="city"><br>
+            <datalist id="cities"> 
+               <option value="Toronto">
+               <option value="Montreal">
+               <option value="Calgary">
+               <option value="Ottawa">
+               <option value="Edmonton">
+               <option value="Mississauga">
+               <option value="Winnipeg">
+               <option value="Vancouver">
+               <option value="Brampton">
+               <option value="Québec">
+            </datalist>
+            <label class="pc" for="postalcode">*Postal Code: <br></label>
+            <input required type="text" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$"><br>
+            <ul class="radio-list">
+               <li><input checked onclick="ifHiring();" class="q" type="radio" name="message-type" value="question">Question</li>
+               <li><input onclick="ifHiring();" class="c" type="radio" name="message-type" value="comment">Comment</li>
+               <li><input onclick="ifHiring();" id="option_hiring" class="option_hiring" type="radio" name="message-type" value="hiring">Hiring</li>
+            </ul>
+            <div class="whenHiring">
+               <label class="hourly_rate" for="hourly_rate">*Hourly Rate: <br></label>
+               <input required type="number" step=".01" name="hourly_rate" id="hourly_rate" min="15.00"><br>
+            </div>
+            <label class="message" for="message">*Message: <br></label>
+            <textarea required name="message" rows="5"></textarea><br>
+            <input type="submit">
+         </form>
+         <p class="jumptop"><a class="gotop" href="#body">^ Top</a></p>
+      </div>
+   </div>
+</body>
+</html>

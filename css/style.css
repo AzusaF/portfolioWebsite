@@ -1,0 +1,281 @@
+* {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: rgb(255, 150, 131);
+   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+html {
+   scroll-behavior: smooth;
+ }
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #444;
+   color: white;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.title {
+   font-size: 1.5rem;
+   margin: .5rem;
+   background-color: #444;
+}
+.navbar-links ul{
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+.navbar-links li {
+   list-style: none;
+}
+.navbar-links li a {
+   text-decoration: none;
+   color: white;
+   padding: 1rem;
+   display: block;
+   background-color: #444;
+}
+.navbar-links li a:hover {
+   background-color: #666;
+}
+.toggle-button {
+   position: absolute;
+   top: .75rem;
+   right: 1rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
+   background-color: #444;
+}
+.toggle-button .bar{
+   height: 3px;
+   width: 100%;
+   background-color: white;
+   border-radius: 10px;
+}
+.section1 {
+   width: 100%;
+}
+.img-me{
+   display:block;
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 30%;
+   border-radius: 500px;
+}
+.section1 h2 {
+   text-align: center;
+}
+.download-desc {
+   text-align: center;
+}
+.download {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-decoration: none;
+   color: white;
+   background-color: rgb(82, 53, 53);
+   border-radius: 3px;
+   padding: 5px;
+   cursor: pointer;
+   width: 200px;
+   text-align: center;
+}
+.contactme {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-decoration: none;
+   color: white;
+   background-color: rgb(82, 53, 53);
+   border-radius: 3px;
+   padding: 5px;
+   cursor: pointer;
+   width: 100px;
+   text-align: center;
+}
+.about {
+   margin-top: 60px;
+   padding: 15px;
+   background-color:rgb(248, 214, 207);
+   float: left;
+   height: 230px;
+   width: 50%;
+}
+.about2 {
+   margin-top: 60px;
+   padding: 15px;
+   background-color:rgb(248, 214, 207);
+   float: right;
+   height: 230px;
+   width: 50%;
+}
+.edu-title{
+   text-align: center;
+   margin-top: 30px;
+   margin-left: 20px;
+}
+.edu {
+   border-collapse: collapse;
+   margin: 25px 0;
+   min-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+.edu tr {
+   background-color: rgb(248, 214, 207);
+}
+.year {
+   color: white;
+   background-color: #444;
+}
+.edu td {
+   padding:12px 15px;
+}
+.school a {
+   text-decoration: none;
+   color: black;
+}
+.school a:hover {
+   color:rgb(255, 150, 131);
+}
+.edu .year,
+.edu .course {
+   border-bottom: 1px solid #999;
+}
+.jumptop {
+   text-align: center;
+}
+.gotop {
+   font-size: 18px;
+   text-decoration: none;
+   color: #444;
+}
+.contact {
+   text-align: center;
+}
+.form label {
+   margin-left: -100px;
+}
+.form label.city{
+   margin-left: -110px;
+}
+.form label.address {
+   margin-left: -80px;
+}
+.form label.pc {
+   margin-left: -50px;
+}
+.radio-list {
+   list-style: none;
+}
+.radio-list input.q {
+   margin-left: -60px;
+}
+.radio-list input.c {
+   margin-left: -52px;
+}
+.radio-list input.option_hiring {
+   margin-left: -85px;
+}
+.form label.message {
+   margin-left: -75px;
+}
+.form label.hourly_rate {
+   margin-left: -57px;
+}
+.form div.whenHiring {
+   display:none;
+}
+.form div.whenHiring.true {
+   display:block;
+}
+
+@media only screen and (max-width: 912px){
+   .about {
+      height: 250px;
+   }
+   .about2 {
+      height: 250px;
+   }
+   .edu-title{
+      margin-top: 30px;
+   }
+}
+@media  only screen and (max-width: 1094px){
+   .about {
+      height: 400px;
+   }
+   .about2 {
+      height: 400px;
+   }
+}
+@media  only screen and (max-width: 590px){
+   .about {
+      margin-top: 60px;
+      float:unset;
+      height: 200px;
+      width: 100%;
+   }
+   .about2 {
+      margin-top: 0px;
+      padding: 15px;
+      float:unset;
+      height: 200px;
+      width: 100%;
+   }
+   body {
+      font-family: Arial, Helvetica, sans-serif;
+   }
+   .navbar {
+      font-family:Arial, Helvetica, sans-serif;
+   }
+}
+
+@media  only screen and (max-width: 400px){
+   .img-me{
+      width: 50%;
+   }
+   .toggle-button {
+      display: flex;
+   }
+   .navbar-links {
+      display: none;
+      width: 100%;
+   }
+   .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+   }
+   .navbar-links li {
+      text-align: center;
+   }
+   .navbar-links li  a {
+      padding: .5rem 1rem;
+   }
+   .navbar-links.active {
+      display: flex;
+   }
+   .about {
+      margin-top: 20px;
+      padding: 15px;
+      width: 100%;
+   }
+   .edu-title{
+      margin-top: 50px;
+   }
+}
+
+
