@@ -127,8 +127,7 @@ html {
    margin: 25px 0;
    min-width: 700px;
    margin-left: auto;
-   margin-right: auto;
-   
+   margin-right: auto;  
 }
 .edu tr {
    background-color: rgb(248, 214, 207);
@@ -198,7 +197,14 @@ html {
 .form div.whenHiring.true {
    display:block;
 }
-
+@media  only screen and (max-width: 1094px){
+   .about {
+      height: 400px;
+   }
+   .about2 {
+      height: 400px;
+   }
+}
 @media only screen and (max-width: 912px){
    .about {
       height: 250px;
@@ -210,14 +216,7 @@ html {
       margin-top: 30px;
    }
 }
-@media  only screen and (max-width: 1094px){
-   .about {
-      height: 400px;
-   }
-   .about2 {
-      height: 400px;
-   }
-}
+
 @media  only screen and (max-width: 590px){
    .about {
       margin-top: 60px;
@@ -237,6 +236,12 @@ html {
    }
    .navbar {
       font-family:Arial, Helvetica, sans-serif;
+   }
+   .edu {
+      margin: 25px 0;
+      min-width: 400px; 
+      margin-left: auto;
+      margin-right: auto;  
    }
 }
 
@@ -275,6 +280,10 @@ html {
    }
    .edu-title{
       margin-top: 50px;
+   }
+   .edu {
+      margin: 25px 0;
+      min-width: 300px;  
    }
 }
 
