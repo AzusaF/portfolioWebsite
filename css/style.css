@@ -79,6 +79,7 @@ html {
    display: block;
    margin-left: auto;
    margin-right: auto;
+   margin-bottom: 30px;
    text-decoration: none;
    color: white;
    background-color: rgb(82, 53, 53);
